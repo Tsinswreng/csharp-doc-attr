@@ -71,7 +71,9 @@ description: 使用\[Doc\] Attribute 爲C#代碼添加註釋
 public IDictionary<K,V> Merge<K,V>(IDictionary<K,V> A, IDictionary<K,V> B)
 	where K:notnull
 {
-	//函數實現裏面不能用Attr 所以還是寫普通的註釋
+	//函數實現裏面不能用Attr 所以通常還是寫普通的註釋。
+	//如果你實在有 想引用其他符號 的需求 就像下面這樣寫:
+	_ = @$"看{nameof(...)}";
 }
 ````
 
